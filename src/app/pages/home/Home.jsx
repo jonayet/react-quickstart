@@ -30,9 +30,9 @@ Home.propTypes = {
 };
 
 function mapStateToProps(state) {
-    const {isFetching, menu} = state;
+    const {flags, menu} = state;
     return {
-        isFetching,
+        isFetching: flags.isFetching,
         menu
     }
 }

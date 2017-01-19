@@ -1,14 +1,16 @@
 import {createStore, applyMiddleware} from "redux";
 import thunkMiddleware from 'redux-thunk'
-import {menu} from "./reducers";
+import rootReducer from "./reducers";
 
 export default function store() {
     const initialState = {
-        isFetching: false,
+        flags: {
+            isFetching: false,
+        },
         menu: []
     };
 
-    return createStore(menu, initialState,
+    return createStore(rootReducer, initialState,
         applyMiddleware(
             thunkMiddleware
         ));

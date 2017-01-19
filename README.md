@@ -1,1 +1,1 @@
-# React Quickstart with Es2015 & Webpack.
+# React Quickstart with ES2015 & Webpack.

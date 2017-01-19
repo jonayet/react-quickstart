@@ -1,22 +1,29 @@
-export const REQUEST_MENU = 'REQUEST_MENU';
-export const RECEIVE_MENU = 'RECEIVE_MENU';
+export const GET_MENU = 'RECEIVE_MENU';
+export const FETCHING_STARTED = 'FETCHING_STARTED';
+export const FETCHING_COMPLETED = 'FETCHING_COMPLETED';
 
-function requestMenu() {
+function startFetching() {
     return {
-        type: REQUEST_MENU
+        type: FETCHING_STARTED
+    }
+}
+
+function completeFetching(){
+    return {
+        type: FETCHING_COMPLETED
     }
 }
 
 function receiveMenu(menu) {
     return {
-        type: RECEIVE_MENU,
+        type: GET_MENU,
         menu
     }
 }
 
 export function getMenu() {
     return dispatch => {
-        dispatch(requestMenu());
+        dispatch(startFetching());
         setTimeout(() => {
             dispatch(receiveMenu(
                 [
@@ -26,6 +33,7 @@ export function getMenu() {
                     'Menu 4'
                 ]
             ));
+            dispatch(completeFetching());
         }, 3000);
     }
 }
