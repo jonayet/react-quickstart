@@ -1,4 +1,4 @@
-export const GET_MENU = 'RECEIVE_MENU';
+export const GET_MENU = 'GET_MENU';
 export const FETCHING_STARTED = 'FETCHING_STARTED';
 export const FETCHING_COMPLETED = 'FETCHING_COMPLETED';
 
