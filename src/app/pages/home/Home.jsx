@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from "react";
 import {connect} from "react-redux";
 import {getMenu} from '../../actions';
-import Menu from "../../components/menu/Menu.jsx";
+import {Menu} from "../../components/menu/Menu.jsx";
 
 class Home extends Component {
     componentDidMount() {
@@ -37,4 +37,5 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(Home);
+const home = connect(mapStateToProps)(Home);
+export {home as Home};

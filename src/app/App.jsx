@@ -2,8 +2,8 @@ import React, {Component} from "react";
 import ReactDom from "react-dom";
 import {Provider} from "react-redux";
 import {Router, Route, hashHistory} from "react-router";
-import Menu from "./components/menu/Menu.jsx";
-import Home from "./pages/home/Home.jsx";
+import {Menu} from "./components/menu/Menu.jsx";
+import {Home} from "./pages/home/Home.jsx";
 import store from "./store";
 
 class App extends Component {

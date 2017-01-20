@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from "react";
 
-class Menu extends Component {
+export class Menu extends Component {
     componentDidMount() {
     }
 
@@ -19,5 +19,3 @@ class Menu extends Component {
 Menu.propTypes = {
     menu: PropTypes.array.isRequired,
 };
-
-export default Menu;
